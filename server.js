@@ -9,6 +9,7 @@ createTable().then(() => console.log("table created"));
 function scheduleArticle() {
     setInterval(async function () {
         try {
+            console.log(computeBitcoinData);
             await computeBitcoinData();
             await computeCovidData();
             await computeMLData();
@@ -16,7 +17,7 @@ function scheduleArticle() {
         } catch (error) {
             console.log(error)
         }
-    }, 10 * 60 * 1000);
+    }, 1000);
 }
 
 scheduleArticle();
