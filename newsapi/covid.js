@@ -5,7 +5,7 @@ async function computeCovidArticles() {
     try {
         let articles = await getNewsData('covid');
         console.log(articles);
-       // await insertArticles(articles);
+       await insertArticles(articles);
     } catch (error) {
         console.log(error);
     }
